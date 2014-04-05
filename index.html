@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset ="utf-8">
+<link rel="stylesheet" type="text/css" href="cssReset.css">
+<link rel="stylesheet" type="text/css" href="cssfiles.css">
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="jsfiles.js"></script>
+</head>
+<body>
+<div class="mainFon">
+	<div class="nameOfPr" align="center">Phone Book
+		<button id="addNewContacts">Add New</button></div>
+		<div class="main">
+			<table width="100%">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>First name</th>
+						<th>Last Name</th>
+						<th>Number</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Дима</td>
+						<td>Белов</td>
+						<td>0631346611</td>
+						<td>
+							<div class="redDelImg">
+								<img src="karandash.png" alt="red" width="20" height="20" />
+								<img src="vedro.png" alt="del" width="20" height="20" />
+								<div style="clear:both"></div>
+							</div>	
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="search">
+				<input type="text" name="searchVal" placeholder="Search">
+			</div>
+		</div>
+	</div>
+
+	<!-- Форма добовление контакта -->
+	<div class="addContactBlock">
+		<span class="novContact">New contact</span>
+		<img src="img/krest.png" alt="close" width="20" height="20" class="closeImg" />
+		<form class="addContactForm" action="">
+			<div>
+				<span>First name</span>
+				<input type="text" name="firstName">
+			</div>
+			<div>
+				<span>Last name</span>
+				<input type="text" name="lastName">
+			</div>
+			<div>
+				<span>Phone number</span>
+				<input type="text" name="phoneNumber">
+			</div>
+			<input type="submit" name="submit" value="Add Contact" class="ok">
+		</form>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
