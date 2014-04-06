@@ -2,7 +2,13 @@ $(document).ready(function () {
 
 							/* Вывод контактов, function */
 	function shouContacts () {
+		if (!Contacts[0]) {
+			$('.dobContact').css({'display':'block'})
+		} else {
+			$('.dobContact').css({'display':'none'})
+		};
 		$('.main tbody tr').remove();
+		
 		$.each(Contacts, function (ind, value) {
 			var firstName = value.firstName;
 			var lastName = value.lastName;
@@ -66,6 +72,10 @@ $(document).ready(function () {
 		shouContacts();
 	};
 
+	// Вывод контактов
+
+	var Contacts = [];
+	shouContacts();
 
 	// Открытие формы добовления контакта
 
@@ -74,11 +84,6 @@ $(document).ready(function () {
 	// Закрытие формы добовления контакта
 
 	$('.closeImg').click(closeShouForm);
-
-	// Вывод контактов
-
-	var Contacts = [];
-	shouContacts();
 
 	// Добовление контакта
 
@@ -94,23 +99,26 @@ $(document).ready(function () {
 				lastName: lastName,
 				phoneNumber: phoneNumber
 			};
+			$('input[type=text]').css({
+				'backgroundColor':'white'
+			});
 			Contacts.push(contact);
 			closeShouForm(); /*Закрытие формы*/
 			shouContacts(); /*Вывод всех контактов*/
 		} else {
 			if (!firstName) {
 				$('input[name=firstName]').css({
-					'border':'solid 2px red'
+					'backgroundColor':'#FF9090'
 				});
 			};
 			if (!lastName) {
 				$('input[name=lastName]').css({
-					'border':'solid 2px red'
+					'backgroundColor':'#FF9090'
 				});
 			};
 			if (!phoneNumber) {
 				$('input[name=phoneNumber]').css({
-					'border':'solid 2px red'
+					'backgroundColor':'#FF9090'
 				});
 			};
 		};
@@ -139,21 +147,24 @@ $(document).ready(function () {
 
 		if (firstName && lastName && phoneNumber) {
 			redactContact(numberContact,firstName,lastName,phoneNumber);
+			$('input[type=text]').css({
+				'backgroundColor':'white'
+			});
 			closeShouForm(); /*Закрытие формы*/
 		} else {
 			if (!firstName) {
 				$('input[name=firstName]').css({
-					'border':'solid 2px red'
+					'backgroundColor':'#FF9090'
 				});
 			};
 			if (!lastName) {
 				$('input[name=lastName]').css({
-					'border':'solid 2px red'
+					'backgroundColor':'#FF9090'
 				});
 			};
 			if (!phoneNumber) {
 				$('input[name=phoneNumber]').css({
-					'border':'solid 2px red'
+					'backgroundColor':'#FF9090'
 				});
 			};
 		};
@@ -162,9 +173,10 @@ $(document).ready(function () {
 	// Удоление контакта
 
 	$('body').on('click','.deleteContact', function () {
-		var tr = $(this).closest('tr').remove();
+		var tr = $(this).closest('tr');
 		var numberContact = tr.data("index");
-		Contacts.splice(1,1);
+		Contacts.splice(numberContact,1);
+		tr.remove();
 		shouContacts(); /*Вывод всех контактов*/
 	})
 

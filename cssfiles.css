@@ -1,5 +1,6 @@
 body {
 	width: 100%;
+	min-width: 250px;
 	height: 100%;
 	padding-top: 30px;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -178,4 +179,13 @@ tbody td {
 }
 .redDelImg img[alt=del] {
 	float: right;
+}
+
+.dobContact {
+	position: absolute;
+	top: 200px;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
 }
