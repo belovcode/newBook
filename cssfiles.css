@@ -15,7 +15,7 @@ body {
 	margin: 0px auto;
 	padding: 0px 3px;
 }
-@media screen and (min-device-width: 600px){
+@media screen and (min-device-width: 100px){
 	.mainFon {
 		width: 100%;
 	}
