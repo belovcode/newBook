@@ -15,6 +15,11 @@ body {
 	margin: 0px auto;
 	padding: 0px 3px;
 }
+@media screen and (min-device-width: 600px){
+	.mainFon {
+		width: 100%;
+	}
+}
 .nameOfPr {
 	color: #F6F6F6;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; 
@@ -23,7 +28,7 @@ body {
 	padding: 10px 0px;
 	position: relative;
 }
-@media screen and (max-width: 280px){
+@media screen and (max-width: 290px){
 	.nameOfPr {
 		padding-left: 40px;
 		text-align: left;
