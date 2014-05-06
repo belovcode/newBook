@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>Phone Book</title>
 <meta charset ="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 <link rel="stylesheet" type="text/css" href="cssReset.css">
 <link rel="stylesheet" type="text/css" href="cssfiles.css">
 <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
@@ -10,13 +11,13 @@
 </head>
 <body>
 <div class="mainFon">
-	<div class="nameOfPr" align="center">Phone Book
+	<div class="nameOfPr">Phone Book
 		<button id="addNewContacts">Add New</button></div>
 		<div class="main">
 			<div class="dobContact">
 				Please add a contact
 			</div>
-			<table width="100%">
+			<table>
 				<thead>
 					<tr>
 						<th>#</th>
@@ -38,8 +39,7 @@
 			</table>
 		</div>
 		<div class="search">
-				<input type="text" name="searchVal" placeholder="Search">
-			</div>
+			<input type="text" name="searchVal" placeholder="Search">
 		</div>
 	</div>
 
@@ -47,7 +47,7 @@
 	<div class="addContactBlock">
 		<span class="novContact">New contact</span>
 		<img src="img/krest.png" alt="close" width="20" height="20" class="closeImg" />
-		<form class="addContactForm" action="">
+		<form class="addContactForm" action="#">
 			<div>
 				<span>First name</span>
 				<input type="text" name="firstName">

@@ -15,11 +15,6 @@ body {
 	margin: 0px auto;
 	padding: 0px 3px;
 }
-@media screen and (min-device-width: 100px){
-	.mainFon {
-		width: 100%;
-	}
-}
 .nameOfPr {
 	color: #F6F6F6;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; 
@@ -27,6 +22,7 @@ body {
 	font-weight: bold;
 	padding: 10px 0px;
 	position: relative;
+	text-align: center;
 }
 @media screen and (max-width: 290px){
 	.nameOfPr {
@@ -40,6 +36,9 @@ body {
 	background-color: #F6F6F6;
 	border: solid thin #F6F6F6;
 	border-radius: 10px;
+}
+.main table {
+	width: 100%;
 }
 
 #addNewContacts {
