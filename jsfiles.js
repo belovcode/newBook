@@ -207,55 +207,6 @@ $(document).ready(function () {
 		})
 	})
 
-	// Отправка значений в localStorage
-
-		// Без передачи переменной
-			localStorage.setItem("name","Dima"); /* setItem - Передаёт значения */
-			var a = localStorage.getItem("name"); /* getItem - Возвращает значения */
-			// var a = localStorage.name; Одно и тоже
-			// alert(a);
-
-		// С передачей переменной
-			var b = "OLOLO";
-			localStorage.setItem("name",b); /*Задаём ключ name и передаём значение OLOLO*/
-			var b1 = localStorage.getItem("name");
-			// var a = localStorage.name; Одно и тоже
-			// alert(b1);
-
-		// Передача массивов ( кодируем данныи )
-			var mas1 = {/*Асоциативный массив*/ 
-				value1: "a",
-				value2: "b",
-				value3: "c"
-			};
-			localStorage.setItem("data1", JSON.stringify(mas1));
-			var c1 = JSON.parse(localStorage.getItem("data1"));
-			// alert(c1.value2);
-
-			var mas2 = ['A','B','C'];/*Простой массив*/
-			localStorage.setItem("data2", JSON.stringify(mas2));
-			var c2 = JSON.parse(localStorage.getItem("data2"));
-			// alert(c2[1]);
-
-			var mas3 = [/*Сложный массив*/
-				{
-					value1: "a",
-					value2: "b",
-					value3: "c"
-				},
-				{
-					value4: "e",
-					value5: "f",
-					value6: "j"
-				}];
-			localStorage.setItem("data3", JSON.stringify(mas3));
-			var c3 = JSON.parse(localStorage.getItem("data3"));
-			// alert(c3[1].value5);
-
-		// Удоление из Хранилища
-			localStorage.removeItem("data");/*Удоление элем. из хранилища*/
-			// localStorage.clear(); Полная очистка хранилища
-
 
 	$('#addNewContacts').css({
 		'outline':'none'
